@@ -16,7 +16,7 @@ public class ConectorBD {
         }else {
             try {
                 Properties properties = new Properties();
-                properties.load(new FileInputStream("bd.properties"));
+                properties.load(new FileInputStream("db.properties"));
 
                 String driver = properties.getProperty("driver");
                 String url = properties.getProperty("url");

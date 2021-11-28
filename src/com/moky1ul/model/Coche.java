@@ -12,12 +12,16 @@ public class Coche {
     private Cliente cliente;
 
     public Coche(String matricula, String marca, String modelo, String color, double precio, Cliente cliente) {
-        this.setMatricula(matricula);
-        this.setMarca(marca);
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setPrecio(precio);
-        this.setCliente(cliente);
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        this.precio = precio;
+        this.cliente = cliente;
+    }
+
+    public Coche() {
+
     }
 
     public String getMatricula() {

@@ -9,11 +9,15 @@ public class Cliente {
     private int telefono;
 
     public Cliente(String nif, String nombre, String ciudad, String direccion, int telefono) {
-        this.setNif(nif);
-        this.setNombre(nombre);
-        this.setCiudad(ciudad);
-        this.setDireccion(direccion);
-        this.setTelefono(telefono);
+        this.nif = nif;
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
+    public Cliente() {
+
     }
 
     public String getNif() {

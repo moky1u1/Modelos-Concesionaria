@@ -18,6 +18,10 @@ public class Revision {
         this.setCoche(coche);
     }
 
+    public Revision() {
+
+    }
+
     public String getCodigo() {
         return codigo;
     }
