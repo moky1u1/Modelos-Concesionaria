@@ -53,12 +53,12 @@ public class RevisionDao {
     }
 
     //DELETE
-    public void eliminarRevision(Revision revision){
+    public void eliminarRevision(String codigo){
         try {
             PreparedStatement preparedStatement = connection
                     .prepareStatement("DELETE FROM revisiones WHERE codigo=?");
 
-            preparedStatement.setString(1, revision.getCodigo());//pk
+            preparedStatement.setString(1, codigo);//pk
 
             preparedStatement.executeUpdate();
         }catch (SQLException e){

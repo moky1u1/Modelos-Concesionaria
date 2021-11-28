@@ -29,8 +29,9 @@ public class ClienteDao {
             preparedStatement.setString(3, cliente.getCiudad());
             preparedStatement.setString(4, cliente.getDireccion());
             preparedStatement.setInt(5, cliente.getTelefono());
-
             preparedStatement.executeUpdate();
+
+            System.out.println(cliente + " creado");
         }catch (SQLException e){
             System.out.println("Error al insertar el Cliente. \n" + e);
         }
@@ -57,13 +58,14 @@ public class ClienteDao {
     }
 
     //DELETE
-    public void eliminarCliente(Cliente cliente){
+    public void eliminarCliente(String nif){
         try {
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("DELETE FROM clientes WHERE nif=?");
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "DELETE FROM clientes WHERE nif=?");
 
-            preparedStatement.setString(1, cliente.getNif());//pk
+            preparedStatement.setString(1, nif);//pk
 
+            System.out.println(nif + " eliminado");
             preparedStatement.executeUpdate();
         }catch (SQLException e){
             System.out.println("Error al eliminar Cliente. " + e);

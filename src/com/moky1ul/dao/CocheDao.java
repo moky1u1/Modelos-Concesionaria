@@ -58,12 +58,12 @@ public class CocheDao {
     }
 
     //DELETE
-    public void eliminarCoche(Coche coche){
+    public void eliminarCoche(String matricula){
         try {
             PreparedStatement preparedStatement = connection
                     .prepareStatement("DELETE FROM coches WHERE matricula=?");
 
-            preparedStatement.setString(1, coche.getMatricula());//pk
+            preparedStatement.setString(1, matricula);//pk
 
             preparedStatement.executeUpdate();
         }catch (SQLException e){
